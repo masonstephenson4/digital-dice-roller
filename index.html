@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Dice Roller</title>
+<style>
+body{font-family:Arial;background:#ede9fe;padding:25px;text-align:center}
+main{max-width:500px;margin:40px auto;background:white;padding:30px;border-radius:18px}
+#dice{font-size:130px;color:#7c3aed;margin:20px}
+button{background:#7c3aed;color:white;padding:14px 25px;border:0;border-radius:8px;cursor:pointer;margin:5px}
+#history{background:#f5f3ff;padding:15px;border-radius:8px;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<h1>Digital Dice Roller</h1>
+<p>Roll a virtual six-sided dice.</p>
+<div id="dice">⚀</div>
+<button onclick="roll()">Roll Dice</button>
+<button onclick="reset()">Reset</button>
+<h3 id="count">Total Rolls: 0</h3>
+<div id="history">No rolls yet.</div>
+</main>
+<script>
+const faces=["⚀","⚁","⚂","⚃","⚄","⚅"];
+let rolls=[];
+function roll(){
+ const value=Math.floor(Math.random()*6)+1;
+ rolls.push(value);
+ document.getElementById("dice").textContent=faces[value-1];
+ document.getElementById("count").textContent="Total Rolls: "+rolls.length;
+ document.getElementById("history").textContent="Recent Rolls: "+rolls.slice(-15).join(", ");
+}
+function reset(){
+ rolls=[];
+ document.getElementById("dice").textContent=faces[0];
+ document.getElementById("count").textContent="Total Rolls: 0";
+ document.getElementById("history").textContent="No rolls yet.";
+}
+</script>
+</body>
+</html>
