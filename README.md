@@ -1,23 +1,23 @@
-# Digital Dice Roller
+## Digital Dice Roller Guide
 
-A virtual six-sided dice simulator.
+This application simulates rolling
+a standard six-sided dice.
 
-## Features
+### Features
 
-- Random dice rolls
-- Roll history
-- Total roll count
+- Random dice results
+- Interactive roll button
+- Result display
+- Roll history (if supported)
 
-## How to Use
+### How to Use
 
-Click Roll Dice to generate a result.
+1. Open the application.
+2. Click the Roll Dice button.
+3. View the generated result.
 
-## Technologies
+### Development Notes
 
-- HTML
-- CSS
-- JavaScript
-
-## Running Locally
-
-Open `index.html` in a modern web browser.
+Use random number generation
+to produce valid dice values
+between 1 and 6.
