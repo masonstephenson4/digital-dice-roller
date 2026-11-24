@@ -21,3 +21,12 @@ a standard six-sided dice.
 Use random number generation
 to produce valid dice values
 between 1 and 6.
+## Manual Testing Checklist
+
+- [ ] Roll the dice and verify results are between 1 and 6.
+- [ ] Check that the roll counter updates.
+- [ ] Reset the roll history and review the result.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
